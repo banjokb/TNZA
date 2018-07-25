@@ -3,9 +3,30 @@ body, html {
     margin: 0;
 }
 
+body {
+    background-color: #ebeced;
+}
+
+.nav {
+    float: right;
+    margin: 10px;
+    margin-right: 50px;
+}
+
+.nav-nav {
+    color: white;
+    margin: 15px;
+    font-weight: 200;
+}
+
+.nav-nav:hover {
+    text-decoration: none;
+    color: #36aad7;
+}
+
 .hero-image {
-    background-image: url("images/hero1.jpg");
-    height: 50%;
+    background-image: url("images/road.jpg");
+    height: 60%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,24 +44,6 @@ body, html {
     letter-spacing: 2px;
 }
 
-.hero-text button {
-    padding: 10px 50px;
-    background-color: transparent;
-    border: 1px solid white;
-    text-align: center;
-    cursor: pointer;
-    color: white;
-    margin-top: 50px;
-}
-
-.hero-text button:hover {
-    background-color: #373533;
-}
-
-body {
-    background-color: #ebeced;
-}
-
 .Nav {
     padding: 20px;
     text-align: center;
@@ -49,30 +52,141 @@ body {
     border: 1px solid white;
 }
 
-.styled {
-    width: 180px;
-    height: 41px;
-    border: none;
+hr {
+    margin-bottom: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
+
+/* Buttons */
+
+/* date select button */
+
 button, input, optgroup, select, textarea {
     margin: 0;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 12px;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     background-color: white;
     border: none;
+    cursor: pointer;
 }
 
-.placeholder {
-    color: black;
+.buttonbutton {
+    text-align: center;
+    cursor: pointer;
+    background-color: #127fab;
+    color: white;
+    padding: 10px 80px;
 }
+
+.buttonbutton:hover {
+    background-color: #36aad7;
+    transition: background-color 0.7s;
+}
+
+/* book now select button */
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background-color: #72a246;
+    border-radius: none !important;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 13px;
+}
+
+.btn:not(:disabled):not(.disabled):hover {
+    opacity: 0.5;
+}
+
+.ak {
+    display: inline-block;
+}
+
+.Adult {
+    width: 69px;
+    padding: 10px;
+}
+
+.Child {
+    width: 69px;
+    padding: 10px;
+}
+
+element.style {
+    width: 60px;
+}
+
+/* h Titles */
 
 h1 {
     text-align: center;
     color: white;
     font-weight: 200;
     font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}
+
+h4 {
+    color: white;
+    font-weight: 100;
+}
+
+h5 {
+    color: #127fab;
+}
+
+h6 {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h7 {
+    color: #d5776d;
+}
+
+h8 {
+    color: white;
+}
+
+h9 {
+    color: white;
+    float: right;
+    font-size: 10px;
+    padding: 5px;
+}
+
+p {
+    display: inline;
+}
+
+#Info {
+    padding: 10px;
+    ;
+    color: green;
+}
+
+.meals {
+    padding: 10px;
+}
+
+.placeholder {
+    color: black;
 }
 
 .result__image {
@@ -91,6 +205,7 @@ h1 {
     background-color: white;
     margin-top: 18px;
     margin-bottom: 18px;
+    box-shadow: 4px 10px 18px lightgray;
 }
 
 .search-container {
@@ -99,6 +214,8 @@ h1 {
     border: none;
     cursor: pointer;
 }
+
+/* Filter links */
 
 .links {
     text-decoration: none !important;
@@ -111,18 +228,14 @@ h1 {
     border-radius: 25px;
 }
 
+.links:hover {
+    background-color: #36aad7;
+    color: white;
+    transition: background-color 0.9s;
+}
+
 .link {
     text-align: center;
-}
-
-h7 {
-    color: #d5776d;
-}
-
-.footer {
-    padding: 200px;
-    background-color: #38454c;
-    margin-top: 50px;
 }
 
 .sort-out {
@@ -139,31 +252,197 @@ form {
     display: inline;
 }
 
-.button {
-    position: relative;
-    padding: 6px 15px;
-    left: -8px;
-    border: 2px solid #207cca;
-    background-color: #207cca !;
-    color: #fafafa;
+.w3-large {
+    margin-left: 20px;
 }
 
-.button:hover {
-    background-color: #fafafa;
-    color: #207cca;
-}
-
-p {
-    display: inline;
-}
-
-h2 {
-    text-align: center;
+#footer {
+    padding: 100px;
+    background-color: #383c3c;
     margin-top: 100px;
-    font-size: 1.2rem;
 }
-hr {
-    margin-bottom:  50px;
-    margin-left: 400px;
-    margin-right: 400px;
+
+#icon {
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#icon:hover {
+    opacity: 0.7;
+}
+
+.icons {
+    text-align: center;
+}
+
+.bot {
+    background-color: white;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+#subscribe {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sub {
+    background-color: #127fab;
+    color: white;
+}
+
+.sub:hover {
+    background-color: #36aad7;
+    transition: background-color 0.7s;
+}
+
+.sign-up {
+    text-align-last: center;
+}
+
+.grey-text {
+    color: #ebeced;
+    margin-bottom: 20px;
+}
+
+.offer {
+    text-align: center;
+    color: #127fab;
+}
+
+.list-property {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+}
+
+.list-property:hover {
+    background-color: transparent;
+    opacity: 0.7;
+    border: 1px solid white;
+    transition: background-color 0.7s;
+}
+
+.list {
+    padding: 15px 200px;
+    background-color: #626a69;
+    width: 100%;
+    text-align: center;
+}
+
+.property-href {
+    padding: 10px;
+    background-color: #4e5554;
+    text-align: center;
+}
+
+.li {
+    color: white;
+    margin: 40px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.li:hover {
+    color: #127fab;
+    text-decoration: none;
+    transition: background-color 1.2s !important;
+}
+
+p.card-text {
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.panel-title {
+    display: inline;
+    font-weight: bold;
+}
+
+.checkbox.pull-right {
+    margin: 0;
+}
+
+.pl-ziro {
+    padding-left: 0px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.card-title {
+    margin-top: 20px;
+}
+
+.dolla {
+    margin-left: 50px;
+}
+
+.payment {
+    margin-top: 30px;
+    border: 1px solid #ced4da;
+    text-align: center;
+    padding-bottom: 25px;
+    box-shadow: 4px 10px 18px lightgray;
+    border-radius: .25rem;
+}
+
+.card-number {
+    border: 1px solid #ced4da;
+}
+
+.MM {
+    border: 1px solid #ced4da;
+}
+
+.CV {
+    border: 1px solid #ced4da;
+}
+
+.payment-head {
+    background-color: #127fab;
+    padding: 15px;
+}
+
+.Paypay {
+    background-color: #72a246;
+    color: white;
+    border-radius: .25rem;
+}
+
+.Paypay:hover {
+    opacity: 0.5;
+}
+
+.checkbox {
+    float: right;
+    margin-top: 5px;
+}
+.meal-option {
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 15px;
 }

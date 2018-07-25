@@ -20,34 +20,99 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="code.js"></script>
+
+
 </head>
-<div class="hero-image">
-    <div class="hero-text">
-        <h1>Book a Visit</h1>
-        <p>Toursim New Zealand Accommodation</p>
-        <div class="Nav">
-                <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />            <select class="styled">
-                <option value="#">Number of Guests</option>
-                <option value="#">1</option>
-                <option value="#">2</option>
-                <option value="#">3</option>
-                <option value="#">4</option>
-            </select>
-        </div>
 
-    </div>
-
-</div>
-<h2>Take a look at what we have to offer!</h2>
 <body>
-    <div class="link">
-        <a class="links" href="Hotel">Hotel</a>
-        <a class="links" href="Motel">Motel</a>
-        <a class="links" href="Bach">Bach</a>
-    </div>
-    <hr>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-    <div class="container">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tourism New Zealand Accommodation</h5>
+                    <button id="datepicker" type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span id="container-name"></span>
+                    <br>
+                    <span id="container-price"></span>
+                    <br>
+                    <span id="meal-name"></span>
+                    <br>
+                    <span id="total-price"></span>
+
+                    <div class="payment">
+                        <div class="payment-head">
+                            <h8>Payment Details</h8>
+                            <input class="checkbox" type="checkbox" name="pay" value="remember">
+                            <h9>Remember</h9>
+                        </div>
+                        <h6>CARD NUMBER</h6>
+                        <input class="card-number" placeholder="Valid Card Number">
+                        <h6>EXPIRY DATE</h6>
+                        <input class="MM" placeholder="MM">
+                        <input class="MM" placeholder="YY">
+                        <h6>CV CODE</h6>
+                        <input class="CV" placeholder="CV">
+                        <button class="Paypay">Pay</button>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button id="party" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="hero-image">
+        <div class="nav">
+            <a class="nav-nav" href="#" class="popup" onclick="myFunction()">List your property</a>
+            <a class="nav-nav" href="#" class="popup" onclick="myFunction()">Register</a>
+            <a class="nav-nav" href="#" class="popup" onclick="myFunction()">Sign in</a>
+        </div>
+        <div class="hero-text">
+            <h1>Book a Visit</h1>
+            <p>Tourism New Zealand Accommodation</p>
+            <div class="Nav">
+                <input type="text" name="daterange" value="01/01/2018 - 01/15/2018">
+                <div class="ak">
+                    <input class="Adult" type="number" placeholder="Adults">
+                    <input class="Child" type="number" placeholder="Kids">
+                </div>
+                <button class="buttonbutton" onclick="smoothScroll(document.getElementById('second'))">Search</button>
+            </div>
+            <div class="second" id="second"></div>
+        </div>
+    </div>
+    </div>
+    <div class="top-top">
+        <h2>Take a look at what we have to offer!</h2>
+        <div class="offer">
+            <p>select dates to see availability</p>
+        </div>
+        <div class="link">
+            <a class="links" href="#All">All</a>
+            <a class="links" href="#Hotel">Hotel</a>
+            <a class="links" href="#Motel">Motel</a>
+            <a class="links" href="#Bach">Bach</a>
+        </div>
+        <hr>
+        <div class="meal-option">
+            <h10>Meal option included, Pick between our meals now!</h10>
+        </div>
+    </div>
+    <!-- Image cards -->
+
+    <div class="container" id="motel-list">
+        <!--
         <div class="row result">
             <div class="col-4 result__image-col result__image--overflow-hidden">
                 <div style="background-image: url(images/hotel1.jpg);" class="result__image"></div>
@@ -60,6 +125,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -88,7 +160,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -105,6 +178,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -133,7 +213,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -150,6 +231,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -178,7 +266,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -195,6 +284,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -223,7 +319,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -240,6 +337,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -268,7 +372,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -285,6 +390,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -313,7 +425,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -330,6 +443,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -358,7 +478,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -375,6 +496,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -403,7 +531,8 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -420,6 +549,13 @@
                 <a href="#" class="btn btn-primary">Book now</a>
                 <a href="view">Photos</a>
                 <a href="info">Info</a>
+                <select class"meals">
+                    <option value="#">Meal option</option>
+                    <option value="#">Chicken</option>
+                    <option value="#">Beef</option>
+                    <option value="#">Fish</option>
+                    <option value="#">Greens</option>
+                  </select>
                 <a class="dolla" href="#">NZ$159</a>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -448,46 +584,47 @@
                         <h5 class="card-title">Clean & Tidy</h5>
                         <p class="card-text">With stunning views and a great atmosphere, This place provides guests modern accommodations in one
                             of New Zealand's most historic buildings. The hotel is located in the city’s Central Business
-                            District.</p>
+                            District.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sweet Treats</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    treat name
-                    <span id="treat-name"></span>
-                    <br> treat price
-                    <span id="treat-price"></span>
-                    <br> event number of attendees
-                    <span id="event-attendees"></span>
-                    <br> total price
-                    <span id="total-price"></span>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
+    -->
     </div>
-</body>
-    <footer>
-        <div class="footer">
+    <footer id="footer">
+        <div class="sign-up">
+            <h4>Save time, save money!</h4>
+            <p class="grey-text">Sign up and we'll send the best deals to you</p>
+        </div>
+        <div id="subscribe">
+            <input class="email" type="email" placeholder="Your Email">
+            <button class="sub">Subscribe</button>
+        </div>
+        <hr class="bot">
+        <h3>Like us on</h3>
 
+        <div class="icons">
+            <a id="icon" href="#" class="fa fa-facebook"></a>
+            <a id="icon" href="#" class="fa fa-twitter"></a>
+            <a id="icon" href="#" class="fa fa-google"></a>
+            <a id="icon" href="#" class="fa fa-linkedin"></a>
+            <a id="icon" href="#" class="fa fa-instagram"></a>
+            <a id="icon" href="#" class="fa fa-pinterest"></a>
+        </div>
+        <div class="list">
+            <button class="list-property">List your property</button>
+        </div>
+        <div class="property-href">
+            <a class="li" href="#">List property</a>
+            <a class="li" href="#">Make changes tou your listing</a>
+            <a class="li" href="#">Customer service Info</a>
+            <a class="li" href="#">Your Account</a>
+            <a class="li" href="#">Become an affiliate</a>
+            <a class="li" href="#">Change booking</a>
         </div>
     </footer>
+</body>
 
 </html>
